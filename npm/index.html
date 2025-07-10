@@ -1,0 +1,1579 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://S1M0N38.github.io/gemini-cli/npm/">
+      
+      
+        <link rel="prev" href="../integration-tests/">
+      
+      
+        <link rel="next" href="../quota-and-pricing/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.15">
+    
+    
+      
+        <title>Package Overview - Gemini CLI</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.342714a4.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#package-overview" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Gemini CLI" class="md-header__button md-logo" aria-label="Gemini CLI" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M9.4 86.6c-12.5-12.5-12.5-32.7 0-45.2s32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L178.7 256zM256 416h288c17.7 0 32 14.3 32 32s-14.3 32-32 32H256c-17.7 0-32-14.3-32-32s14.3-32 32-32"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Gemini CLI
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Package Overview
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/S1M0N38/gemini-cli" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    S1M0N38/gemini-cli
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Gemini CLI" class="md-nav__button md-logo" aria-label="Gemini CLI" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M9.4 86.6c-12.5-12.5-12.5-32.7 0-45.2s32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L178.7 256zM256 416h288c17.7 0 32 14.3 32 32s-14.3 32-32 32H256c-17.7 0-32-14.3-32-32s14.3-32 32-32"/></svg>
+
+    </a>
+    Gemini CLI
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/S1M0N38/gemini-cli" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    S1M0N38/gemini-cli
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Welcome to Gemini CLI documentation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../architecture/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Gemini CLI Architecture Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../checkpointing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Checkpointing
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../deployment/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Gemini CLI Execution and Deployment
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../extension/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Gemini CLI Extensions
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../integration-tests/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Integration Tests
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Package Overview
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Package Overview
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#googlegemini-cli" class="md-nav__link">
+    <span class="md-ellipsis">
+      @google/gemini-cli
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#googlegemini-cli-core" class="md-nav__link">
+    <span class="md-ellipsis">
+      @google/gemini-cli-core
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../quota-and-pricing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Gemini CLI: Quotas and Pricing
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sandbox/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Sandboxing in the Gemini CLI
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../telemetry/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Gemini CLI Observability Guide
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tos-privacy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Gemini CLI: Terms of Service and Privacy Notice
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../troubleshooting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Troubleshooting Guide
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Uninstall/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Uninstall
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_14" >
+        
+          
+          <label class="md-nav__link" for="__nav_14" id="__nav_14_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    CLI
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_14_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_14">
+            <span class="md-nav__icon md-icon"></span>
+            CLI
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cli/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Gemini CLI
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cli/authentication/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Authentication Setup
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cli/commands/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    CLI Commands
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cli/configuration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Gemini CLI Configuration
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cli/themes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Themes
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cli/token-caching/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Token Caching and Cost Optimization
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cli/tutorials/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Tutorials
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_15" >
+        
+          
+          <label class="md-nav__link" for="__nav_15" id="__nav_15_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Core
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_15_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_15">
+            <span class="md-nav__icon md-icon"></span>
+            Core
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../core/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Gemini CLI Core
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../core/memport/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Memory Import Processor
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../core/tools-api/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Gemini CLI Core: Tools API
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_16" >
+        
+          
+          <label class="md-nav__link" for="__nav_16" id="__nav_16_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Examples
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_16_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_16">
+            <span class="md-nav__icon md-icon"></span>
+            Examples
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../examples/proxy-script/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Example Proxy Script
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_17" >
+        
+          
+          <label class="md-nav__link" for="__nav_17" id="__nav_17_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Tools
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_17_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_17">
+            <span class="md-nav__icon md-icon"></span>
+            Tools
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tools/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Gemini CLI tools
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tools/file-system/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Gemini CLI file system tools
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tools/mcp-server/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    MCP servers with the Gemini CLI
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tools/memory/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Memory Tool (save_memory)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tools/multi-file/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Multi File Read Tool (read_many_files)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tools/shell/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Shell Tool (run_shell_command)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tools/web-fetch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Web Fetch Tool (web_fetch)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tools/web-search/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Web Search Tool (google_web_search)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#googlegemini-cli" class="md-nav__link">
+    <span class="md-ellipsis">
+      @google/gemini-cli
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#googlegemini-cli-core" class="md-nav__link">
+    <span class="md-ellipsis">
+      @google/gemini-cli-core
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="package-overview">Package Overview</h1>
+<p>This monorepo contains two main packages: <code>@google/gemini-cli</code> and <code>@google/gemini-cli-core</code>.</p>
+<h2 id="googlegemini-cli"><code>@google/gemini-cli</code></h2>
+<p>This is the main package for the Gemini CLI. It is responsible for the user interface, command parsing, and all other user-facing functionality.</p>
+<p>When this package is published, it is bundled into a single executable file. This bundle includes all of the package's dependencies, including <code>@google/gemini-cli-core</code>. This means that whether a user installs the package with <code>npm install -g @google/gemini-cli</code> or runs it directly with <code>npx @google/gemini-cli</code>, they are using this single, self-contained executable.</p>
+<h2 id="googlegemini-cli-core"><code>@google/gemini-cli-core</code></h2>
+<p>This package contains the core logic for interacting with the Gemini API. It is responsible for making API requests, handling authentication, and managing the local cache.</p>
+<p>This package is not bundled. When it is published, it is published as a standard Node.js package with its own dependencies. This allows it to be used as a standalone package in other projects, if needed. All transpiled js code in the <code>dist</code> folder is included in the package.</p>
+<h1 id="release-process">Release Process</h1>
+<p>This project follows a structured release process to ensure that all packages are versioned and published correctly. The process is designed to be as automated as possible.</p>
+<h2 id="how-to-release">How To Release</h2>
+<p>Releases are managed through the <a href="https://github.com/google-gemini/gemini-cli/actions/workflows/release.yml">release.yml</a> GitHub Actions workflow. To perform a manual release for a patch or hotfix:</p>
+<ol>
+<li>Navigate to the <strong>Actions</strong> tab of the repository.</li>
+<li>Select the <strong>Release</strong> workflow from the list.</li>
+<li>Click the <strong>Run workflow</strong> dropdown button.</li>
+<li>Fill in the required inputs:<ul>
+<li><strong>Version</strong>: The exact version to release (e.g., <code>v0.2.1</code>).</li>
+<li><strong>Ref</strong>: The branch or commit SHA to release from (defaults to <code>main</code>).</li>
+<li><strong>Dry Run</strong>: Leave as <code>true</code> to test the workflow without publishing, or set to <code>false</code> to perform a live release.</li>
+</ul>
+</li>
+<li>Click <strong>Run workflow</strong>.</li>
+</ol>
+<h2 id="nightly-releases">Nightly Releases</h2>
+<p>In addition to manual releases, this project has an automated nightly release process to provide the latest "bleeding edge" version for testing and development.</p>
+<h3 id="process">Process</h3>
+<p>Every night at midnight UTC, the <a href="https://github.com/google-gemini/gemini-cli/actions/workflows/release.yml">Release workflow</a> runs automatically on a schedule. It performs the following steps:</p>
+<ol>
+<li>Checks out the latest code from the <code>main</code> branch.</li>
+<li>Installs all dependencies.</li>
+<li>Runs the full suite of <code>preflight</code> checks and integration tests.</li>
+<li>If all tests succeed, it calculates the next nightly version number (e.g., <code>v0.2.1-nightly.20230101</code>).</li>
+<li>It then builds and publishes the packages to npm with the <code>nightly</code> dist-tag.</li>
+<li>Finally, it creates a GitHub Release for the nightly version.</li>
+</ol>
+<h3 id="failure-handling">Failure Handling</h3>
+<p>If any step in the nightly workflow fails, it will automatically create a new issue in the repository with the labels <code>bug</code> and <code>nightly-failure</code>. The issue will contain a link to the failed workflow run for easy debugging.</p>
+<h3 id="how-to-use-the-nightly-build">How to Use the Nightly Build</h3>
+<p>To install the latest nightly build, use the <code>@nightly</code> tag:</p>
+<pre><code class="language-bash">npm install -g @google/gemini-cli@nightly
+</code></pre>
+<p>We also run a Google cloud build called <a href="../.gcp/release-docker.yaml">release-docker.yml</a>. Which publishes the sandbox docker to match your release. This will also be moved to GH and combined with the main release file once service account permissions are sorted out.</p>
+<h3 id="after-the-release">After the Release</h3>
+<p>After the workflow has successfully completed, you can monitor its progress in the <a href="https://github.com/google-gemini/gemini-cli/actions/workflows/release.yml">GitHub Actions tab</a>. Once complete, you should:</p>
+<ol>
+<li>Go to the <a href="https://github.com/google-gemini/gemini-cli/pulls">pull requests page</a> of the repository.</li>
+<li>Create a new pull request from the <code>release/vX.Y.Z</code> branch to <code>main</code>.</li>
+<li>Review the pull request (it should only contain version updates in <code>package.json</code> files) and merge it. This keeps the version in <code>main</code> up-to-date.</li>
+</ol>
+<h2 id="release-validation">Release Validation</h2>
+<p>After pushing a new release smoke testing should be performed to ensure that the packages are working as expected. This can be done by installing the packages locally and running a set of tests to ensure that they are functioning correctly.</p>
+<ul>
+<li><code>npx -y @google/gemini-cli@latest --version</code> to validate the push worked as expected if you were not doing a rc or dev tag</li>
+<li><code>npx -y @google/gemini-cli@&lt;release tag&gt; --version</code> to validate the tag pushed appropriately</li>
+<li><em>This is destructive locally</em> <code>npm uninstall @google/gemini-cli &amp;&amp; npm uninstall -g @google/gemini-cli &amp;&amp; npm cache clean --force &amp;&amp;  npm install @google/gemini-cli@&lt;version&gt;</code></li>
+<li>Smoke testing a basic run through of exercising a few llm commands and tools is recommended to ensure that the packages are working as expected. We'll codify this more in the future.</li>
+</ul>
+<h2 id="when-to-merge-the-version-change-or-not">When to merge the version change, or not?</h2>
+<p>The above pattern for creating patch or hotfix releases from current or older commits leaves the repository in the following state:</p>
+<ol>
+<li>The Tag (<code>vX.Y.Z-patch.1</code>): This tag correctly points to the original commit on main
+    that contains the stable code you intended to release. This is crucial. Anyone checking
+    out this tag gets the exact code that was published.</li>
+<li>The Branch (<code>release-vX.Y.Z-patch.1</code>): This branch contains one new commit on top of the
+    tagged commit. That new commit only contains the version number change in package.json
+    (and other related files like package-lock.json).</li>
+</ol>
+<p>This separation is good. It keeps your main branch history clean of release-specific
+version bumps until you decide to merge them.</p>
+<p>This is the critical decision, and it depends entirely on the nature of the release.</p>
+<h3 id="merge-back-for-stable-patches-and-hotfixes">Merge Back for Stable Patches and Hotfixes</h3>
+<p>You almost always want to merge the <code>release-&lt;tag&gt;</code> branch back into <code>main</code> for any
+stable patch or hotfix release.</p>
+<ul>
+<li>Why? The primary reason is to update the version in main's package.json. If you release
+  v1.2.1 from an older commit but never merge the version bump back, your main branch's
+  package.json will still say "version": "1.2.0". The next developer who starts work for
+  the next feature release (v1.3.0) will be branching from a codebase that has an
+  incorrect, older version number. This leads to confusion and requires manual version
+  bumping later.</li>
+<li>The Process: After the release-v1.2.1 branch is created and the package is successfully
+  published, you should open a pull request to merge release-v1.2.1 into main. This PR
+  will contain just one commit: "chore: bump version to v1.2.1". It's a clean, simple
+  integration that keeps your main branch in sync with the latest released version.</li>
+</ul>
+<h3 id="do-not-merge-back-for-pre-releases-rc-beta-dev">Do NOT Merge Back for Pre-Releases (RC, Beta, Dev)</h3>
+<p>You typically do not merge release branches for pre-releases back into <code>main</code>.</p>
+<ul>
+<li>Why? Pre-release versions (e.g., v1.3.0-rc.1, v1.3.0-rc.2) are, by definition, not
+  stable and are temporary. You don't want to pollute your main branch's history with a
+  series of version bumps for release candidates. The package.json in main should reflect
+  the latest stable release version, not an RC.</li>
+<li>The Process: The release-v1.3.0-rc.1 branch is created, the npm publish --tag rc happens,
+  and then... the branch has served its purpose. You can simply delete it. The code for
+  the RC is already on main (or a feature branch), so no functional code is lost. The
+  release branch was just a temporary vehicle for the version number.</li>
+</ul>
+<h2 id="local-testing-and-validation-changes-to-the-packaging-and-publishing-process">Local Testing and Validation: Changes to the Packaging and Publishing Process</h2>
+<p>If you need to test the release process without actually publishing to NPM or creating a public GitHub release, you can trigger the workflow manually from the GitHub UI.</p>
+<ol>
+<li>Go to the <a href="https://github.com/google-gemini/gemini-cli/actions/workflows/release.yml">Actions tab</a> of the repository.</li>
+<li>Click on the "Run workflow" dropdown.</li>
+<li>Leave the <code>dry_run</code> option checked (<code>true</code>).</li>
+<li>Click the "Run workflow" button.</li>
+</ol>
+<p>This will run the entire release process but will skip the <code>npm publish</code> and <code>gh release create</code> steps. You can inspect the workflow logs to ensure everything is working as expected.</p>
+<p>It is crucial to test any changes to the packaging and publishing process locally before committing them. This ensures that the packages will be published correctly and that they will work as expected when installed by a user.</p>
+<p>To validate your changes, you can perform a dry run of the publishing process. This will simulate the publishing process without actually publishing the packages to the npm registry.</p>
+<pre><code class="language-bash">npm_package_version=9.9.9 SANDBOX_IMAGE_REGISTRY=&quot;registry&quot; SANDBOX_IMAGE_NAME=&quot;thename&quot; npm run publish:npm --dry-run
+</code></pre>
+<p>This command will do the following:</p>
+<ol>
+<li>Build all the packages.</li>
+<li>Run all the prepublish scripts.</li>
+<li>Create the package tarballs that would be published to npm.</li>
+<li>Print a summary of the packages that would be published.</li>
+</ol>
+<p>You can then inspect the generated tarballs to ensure that they contain the correct files and that the <code>package.json</code> files have been updated correctly. The tarballs will be created in the root of each package's directory (e.g., <code>packages/cli/google-gemini-cli-0.1.6.tgz</code>).</p>
+<p>By performing a dry run, you can be confident that your changes to the packaging process are correct and that the packages will be published successfully.</p>
+<h2 id="release-deep-dive">Release Deep Dive</h2>
+<p>The main goal of the release process is to take the source code from the packages/ directory, build it, and assemble a
+clean, self-contained package in a temporary <code>bundle</code> directory at the root of the project. This <code>bundle</code> directory is what
+actually gets published to NPM.</p>
+<p>Here are the key stages:</p>
+<p>Stage 1: Pre-Release Sanity Checks and Versioning</p>
+<ul>
+<li>What happens: Before any files are moved, the process ensures the project is in a good state. This involves running tests,
+  linting, and type-checking (npm run preflight). The version number in the root package.json and packages/cli/package.json
+  is updated to the new release version.</li>
+<li>Why: This guarantees that only high-quality, working code is released. Versioning is the first step to signify a new
+  release.</li>
+</ul>
+<p>Stage 2: Building the Source Code</p>
+<ul>
+<li>What happens: The TypeScript source code in packages/core/src and packages/cli/src is compiled into JavaScript.</li>
+<li>File movement:</li>
+<li>packages/core/src/*<em>/</em>.ts -&gt; compiled to -&gt; packages/core/dist/</li>
+<li>packages/cli/src/*<em>/</em>.ts -&gt; compiled to -&gt; packages/cli/dist/</li>
+<li>Why: The TypeScript code written during development needs to be converted into plain JavaScript that can be run by
+  Node.js. The core package is built first as the cli package depends on it.</li>
+</ul>
+<p>Stage 3: Assembling the Final Publishable Package</p>
+<p>This is the most critical stage where files are moved and transformed into their final state for publishing. A temporary
+<code>bundle</code> folder is created at the project root to house the final package contents.</p>
+<ol>
+<li>
+<p>The <code>package.json</code> is Transformed:</p>
+<ul>
+<li>What happens: The package.json from packages/cli/ is read, modified, and written into the root <code>bundle</code>/ directory.</li>
+<li>File movement: packages/cli/package.json -&gt; (in-memory transformation) -&gt; <code>bundle</code>/package.json</li>
+<li>Why: The final package.json must be different from the one used in development. Key changes include:</li>
+<li>Removing devDependencies.</li>
+<li>Removing workspace-specific "dependencies": { "@gemini-cli/core": "workspace:*" } and ensuring the core code is
+    bundled directly into the final JavaScript file.</li>
+<li>Ensuring the bin, main, and files fields point to the correct locations within the final package structure.</li>
+</ul>
+</li>
+<li>
+<p>The JavaScript Bundle is Created:</p>
+<ul>
+<li>What happens: The built JavaScript from both packages/core/dist and packages/cli/dist are bundled into a single,
+  executable JavaScript file.</li>
+<li>File movement: packages/cli/dist/index.js + packages/core/dist/index.js -&gt; (bundled by esbuild) -&gt; <code>bundle</code>/gemini.js (or a
+  similar name).</li>
+<li>Why: This creates a single, optimized file that contains all the necessary application code. It simplifies the package
+  by removing the need for the core package to be a separate dependency on NPM, as its code is now included directly.</li>
+</ul>
+</li>
+<li>
+<p>Static and Supporting Files are Copied:</p>
+<ul>
+<li>What happens: Essential files that are not part of the source code but are required for the package to work correctly
+  or be well-described are copied into the <code>bundle</code> directory.</li>
+<li>File movement:</li>
+<li>README.md -&gt; <code>bundle</code>/README.md</li>
+<li>LICENSE -&gt; <code>bundle</code>/LICENSE</li>
+<li>packages/cli/src/utils/*.sb (sandbox profiles) -&gt; <code>bundle</code>/</li>
+<li>Why:</li>
+<li>The README.md and LICENSE are standard files that should be included in any NPM package.</li>
+<li>The sandbox profiles (.sb files) are critical runtime assets required for the CLI's sandboxing feature to
+    function. They must be located next to the final executable.</li>
+</ul>
+</li>
+</ol>
+<p>Stage 4: Publishing to NPM</p>
+<ul>
+<li>What happens: The npm publish command is run from inside the root <code>bundle</code> directory.</li>
+<li>Why: By running npm publish from within the <code>bundle</code> directory, only the files we carefully assembled in Stage 3 are uploaded
+  to the NPM registry. This prevents any source code, test files, or development configurations from being accidentally
+  published, resulting in a clean and minimal package for users.</li>
+</ul>
+<p>Summary of File Flow</p>
+<pre><code class="language-mermaid">graph TD
+    subgraph &quot;Source Files&quot;
+        A[&quot;packages/core/src/*.ts&lt;br/&gt;packages/cli/src/*.ts&quot;]
+        B[&quot;packages/cli/package.json&quot;]
+        C[&quot;README.md&lt;br/&gt;LICENSE&lt;br/&gt;packages/cli/src/utils/*.sb&quot;]
+    end
+
+    subgraph &quot;Process&quot;
+        D(Build)
+        E(Transform)
+        F(Assemble)
+        G(Publish)
+    end
+
+    subgraph &quot;Artifacts&quot;
+        H[&quot;Bundled JS&quot;]
+        I[&quot;Final package.json&quot;]
+        J[&quot;bundle/&quot;]
+    end
+
+    subgraph &quot;Destination&quot;
+        K[&quot;NPM Registry&quot;]
+    end
+
+    A --&gt; D --&gt; H
+    B --&gt; E --&gt; I
+    C --&gt; F
+    H --&gt; F
+    I --&gt; F
+    F --&gt; J
+    J --&gt; G --&gt; K
+</code></pre>
+<p>This process ensures that the final published artifact is a purpose-built, clean, and efficient representation of the
+project, rather than a direct copy of the development workspace.</p>
+<h2 id="npm-workspaces">NPM Workspaces</h2>
+<p>This project uses <a href="https://docs.npmjs.com/cli/v10/using-npm/workspaces">NPM Workspaces</a> to manage the packages within this monorepo. This simplifies development by allowing us to manage dependencies and run scripts across multiple packages from the root of the project.</p>
+<h3 id="how-it-works">How it Works</h3>
+<p>The root <code>package.json</code> file defines the workspaces for this project:</p>
+<pre><code class="language-json">{
+  &quot;workspaces&quot;: [&quot;packages/*&quot;]
+}
+</code></pre>
+<p>This tells NPM that any folder inside the <code>packages</code> directory is a separate package that should be managed as part of the workspace.</p>
+<h3 id="benefits-of-workspaces">Benefits of Workspaces</h3>
+<ul>
+<li><strong>Simplified Dependency Management</strong>: Running <code>npm install</code> from the root of the project will install all dependencies for all packages in the workspace and link them together. This means you don't need to run <code>npm install</code> in each package's directory.</li>
+<li><strong>Automatic Linking</strong>: Packages within the workspace can depend on each other. When you run <code>npm install</code>, NPM will automatically create symlinks between the packages. This means that when you make changes to one package, the changes are immediately available to other packages that depend on it.</li>
+<li><strong>Simplified Script Execution</strong>: You can run scripts in any package from the root of the project using the <code>--workspace</code> flag. For example, to run the <code>build</code> script in the <code>cli</code> package, you can run <code>npm run build --workspace @google/gemini-cli</code>.</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "..", "features": ["search.suggest", "search.highlight", "content.tabs.link", "content.code.annotation", "content.code.copy"], "search": "../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.56ea9cef.min.js"></script>
+      
+    
+  </body>
+</html>

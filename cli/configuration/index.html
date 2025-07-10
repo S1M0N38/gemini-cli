@@ -1,0 +1,2007 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://S1M0N38.github.io/gemini-cli/cli/configuration/">
+      
+      
+        <link rel="prev" href="../commands/">
+      
+      
+        <link rel="next" href="../themes/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.15">
+    
+    
+      
+        <title>Gemini CLI Configuration - Gemini CLI</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.342714a4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#gemini-cli-configuration" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Gemini CLI" class="md-header__button md-logo" aria-label="Gemini CLI" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M9.4 86.6c-12.5-12.5-12.5-32.7 0-45.2s32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L178.7 256zM256 416h288c17.7 0 32 14.3 32 32s-14.3 32-32 32H256c-17.7 0-32-14.3-32-32s14.3-32 32-32"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Gemini CLI
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Gemini CLI Configuration
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/S1M0N38/gemini-cli" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    S1M0N38/gemini-cli
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Gemini CLI" class="md-nav__button md-logo" aria-label="Gemini CLI" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M9.4 86.6c-12.5-12.5-12.5-32.7 0-45.2s32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L178.7 256zM256 416h288c17.7 0 32 14.3 32 32s-14.3 32-32 32H256c-17.7 0-32-14.3-32-32s14.3-32 32-32"/></svg>
+
+    </a>
+    Gemini CLI
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/S1M0N38/gemini-cli" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    S1M0N38/gemini-cli
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Welcome to Gemini CLI documentation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../architecture/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Gemini CLI Architecture Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../checkpointing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Checkpointing
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deployment/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Gemini CLI Execution and Deployment
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../extension/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Gemini CLI Extensions
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../integration-tests/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Integration Tests
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../npm/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Package Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../quota-and-pricing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Gemini CLI: Quotas and Pricing
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sandbox/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Sandboxing in the Gemini CLI
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../telemetry/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Gemini CLI Observability Guide
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tos-privacy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Gemini CLI: Terms of Service and Privacy Notice
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../troubleshooting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Troubleshooting Guide
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Uninstall/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Uninstall
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_14" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_14" id="__nav_14_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    CLI
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_14_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_14">
+            <span class="md-nav__icon md-icon"></span>
+            CLI
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Gemini CLI
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../authentication/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Authentication Setup
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../commands/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    CLI Commands
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Gemini CLI Configuration
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Gemini CLI Configuration
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#configuration-layers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuration layers
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#settings-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      Settings files
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Settings files">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-gemini-directory-in-your-project" class="md-nav__link">
+    <span class="md-ellipsis">
+      The .gemini directory in your project
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#available-settings-in-settingsjson" class="md-nav__link">
+    <span class="md-ellipsis">
+      Available settings in settings.json:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-settingsjson" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example settings.json:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#shell-history" class="md-nav__link">
+    <span class="md-ellipsis">
+      Shell History
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#environment-variables-env-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      Environment Variables &amp; .env Files
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#command-line-arguments" class="md-nav__link">
+    <span class="md-ellipsis">
+      Command-Line Arguments
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#context-files-hierarchical-instructional-context" class="md-nav__link">
+    <span class="md-ellipsis">
+      Context Files (Hierarchical Instructional Context)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Context Files (Hierarchical Instructional Context)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example-context-file-content-eg-geminimd" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example Context File Content (e.g., GEMINI.md)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sandboxing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sandboxing
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#usage-statistics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Usage Statistics
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../themes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Themes
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../token-caching/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Token Caching and Cost Optimization
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tutorials/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Tutorials
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_15" >
+        
+          
+          <label class="md-nav__link" for="__nav_15" id="__nav_15_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Core
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_15_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_15">
+            <span class="md-nav__icon md-icon"></span>
+            Core
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../core/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Gemini CLI Core
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../core/memport/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Memory Import Processor
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../core/tools-api/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Gemini CLI Core: Tools API
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_16" >
+        
+          
+          <label class="md-nav__link" for="__nav_16" id="__nav_16_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Examples
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_16_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_16">
+            <span class="md-nav__icon md-icon"></span>
+            Examples
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../examples/proxy-script/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Example Proxy Script
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_17" >
+        
+          
+          <label class="md-nav__link" for="__nav_17" id="__nav_17_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Tools
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_17_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_17">
+            <span class="md-nav__icon md-icon"></span>
+            Tools
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Gemini CLI tools
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/file-system/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Gemini CLI file system tools
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/mcp-server/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    MCP servers with the Gemini CLI
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/memory/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Memory Tool (save_memory)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/multi-file/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Multi File Read Tool (read_many_files)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/shell/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Shell Tool (run_shell_command)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/web-fetch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Web Fetch Tool (web_fetch)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/web-search/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Web Search Tool (google_web_search)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#configuration-layers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuration layers
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#settings-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      Settings files
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Settings files">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-gemini-directory-in-your-project" class="md-nav__link">
+    <span class="md-ellipsis">
+      The .gemini directory in your project
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#available-settings-in-settingsjson" class="md-nav__link">
+    <span class="md-ellipsis">
+      Available settings in settings.json:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-settingsjson" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example settings.json:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#shell-history" class="md-nav__link">
+    <span class="md-ellipsis">
+      Shell History
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#environment-variables-env-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      Environment Variables &amp; .env Files
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#command-line-arguments" class="md-nav__link">
+    <span class="md-ellipsis">
+      Command-Line Arguments
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#context-files-hierarchical-instructional-context" class="md-nav__link">
+    <span class="md-ellipsis">
+      Context Files (Hierarchical Instructional Context)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Context Files (Hierarchical Instructional Context)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example-context-file-content-eg-geminimd" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example Context File Content (e.g., GEMINI.md)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sandboxing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sandboxing
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#usage-statistics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Usage Statistics
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="gemini-cli-configuration">Gemini CLI Configuration</h1>
+<p>Gemini CLI offers several ways to configure its behavior, including environment variables, command-line arguments, and settings files. This document outlines the different configuration methods and available settings.</p>
+<h2 id="configuration-layers">Configuration layers</h2>
+<p>Configuration is applied in the following order of precedence (lower numbers are overridden by higher numbers):</p>
+<ol>
+<li><strong>Default values:</strong> Hardcoded defaults within the application.</li>
+<li><strong>User settings file:</strong> Global settings for the current user.</li>
+<li><strong>Project settings file:</strong> Project-specific settings.</li>
+<li><strong>System settings file:</strong> System-wide settings.</li>
+<li><strong>Environment variables:</strong> System-wide or session-specific variables, potentially loaded from <code>.env</code> files.</li>
+<li><strong>Command-line arguments:</strong> Values passed when launching the CLI.</li>
+</ol>
+<h2 id="settings-files">Settings files</h2>
+<p>Gemini CLI uses <code>settings.json</code> files for persistent configuration. There are three locations for these files:</p>
+<ul>
+<li><strong>User settings file:</strong></li>
+<li><strong>Location:</strong> <code>~/.gemini/settings.json</code> (where <code>~</code> is your home directory).</li>
+<li><strong>Scope:</strong> Applies to all Gemini CLI sessions for the current user.</li>
+<li><strong>Project settings file:</strong></li>
+<li><strong>Location:</strong> <code>.gemini/settings.json</code> within your project's root directory.</li>
+<li><strong>Scope:</strong> Applies only when running Gemini CLI from that specific project. Project settings override user settings.</li>
+<li><strong>System settings file:</strong></li>
+<li><strong>Location:</strong> <code>/etc/gemini-cli/settings.json</code> (Linux), <code>C:\ProgramData\gemini-cli\settings.json</code> (Windows) or <code>/Library/Application Support/GeminiCli/settings.json</code> (macOS).</li>
+<li><strong>Scope:</strong> Applies to all Gemini CLI sessions on the system, for all users. System settings override user and project settings. May be useful for system administrators at enterprises to have controls over users' Gemini CLI setups.</li>
+</ul>
+<p><strong>Note on environment variables in settings:</strong> String values within your <code>settings.json</code> files can reference environment variables using either <code>$VAR_NAME</code> or <code>${VAR_NAME}</code> syntax. These variables will be automatically resolved when the settings are loaded. For example, if you have an environment variable <code>MY_API_TOKEN</code>, you could use it in <code>settings.json</code> like this: <code>"apiKey": "$MY_API_TOKEN"</code>.</p>
+<h3 id="the-gemini-directory-in-your-project">The <code>.gemini</code> directory in your project</h3>
+<p>In addition to a project settings file, a project's <code>.gemini</code> directory can contain other project-specific files related to Gemini CLI's operation, such as:</p>
+<ul>
+<li><a href="#sandboxing">Custom sandbox profiles</a> (e.g., <code>.gemini/sandbox-macos-custom.sb</code>, <code>.gemini/sandbox.Dockerfile</code>).</li>
+</ul>
+<h3 id="available-settings-in-settingsjson">Available settings in <code>settings.json</code>:</h3>
+<ul>
+<li><strong><code>contextFileName</code></strong> (string or array of strings):</li>
+<li><strong>Description:</strong> Specifies the filename for context files (e.g., <code>GEMINI.md</code>, <code>AGENTS.md</code>). Can be a single filename or a list of accepted filenames.</li>
+<li><strong>Default:</strong> <code>GEMINI.md</code></li>
+<li>
+<p><strong>Example:</strong> <code>"contextFileName": "AGENTS.md"</code></p>
+</li>
+<li>
+<p><strong><code>bugCommand</code></strong> (object):</p>
+</li>
+<li><strong>Description:</strong> Overrides the default URL for the <code>/bug</code> command.</li>
+<li><strong>Default:</strong> <code>"urlTemplate": "https://github.com/google-gemini/gemini-cli/issues/new?template=bug_report.yml&amp;title={title}&amp;info={info}"</code></li>
+<li><strong>Properties:</strong><ul>
+<li><strong><code>urlTemplate</code></strong> (string): A URL that can contain <code>{title}</code> and <code>{info}</code> placeholders.</li>
+</ul>
+</li>
+<li>
+<p><strong>Example:</strong>
+    <code>json
+    "bugCommand": {
+      "urlTemplate": "https://bug.example.com/new?title={title}&amp;info={info}"
+    }</code></p>
+</li>
+<li>
+<p><strong><code>fileFiltering</code></strong> (object):</p>
+</li>
+<li><strong>Description:</strong> Controls git-aware file filtering behavior for @ commands and file discovery tools.</li>
+<li><strong>Default:</strong> <code>"respectGitIgnore": true, "enableRecursiveFileSearch": true</code></li>
+<li><strong>Properties:</strong><ul>
+<li><strong><code>respectGitIgnore</code></strong> (boolean): Whether to respect .gitignore patterns when discovering files. When set to <code>true</code>, git-ignored files (like <code>node_modules/</code>, <code>dist/</code>, <code>.env</code>) are automatically excluded from @ commands and file listing operations.</li>
+<li><strong><code>enableRecursiveFileSearch</code></strong> (boolean): Whether to enable searching recursively for filenames under the current tree when completing @ prefixes in the prompt.</li>
+</ul>
+</li>
+<li>
+<p><strong>Example:</strong>
+    <code>json
+    "fileFiltering": {
+      "respectGitIgnore": true,
+      "enableRecursiveFileSearch": false
+    }</code></p>
+</li>
+<li>
+<p><strong><code>coreTools</code></strong> (array of strings):</p>
+</li>
+<li><strong>Description:</strong> Allows you to specify a list of core tool names that should be made available to the model. This can be used to restrict the set of built-in tools. See <a href="../../core/tools-api/#built-in-tools">Built-in Tools</a> for a list of core tools. You can also specify command-specific restrictions for tools that support it, like the <code>ShellTool</code>. For example, <code>"coreTools": ["ShellTool(ls -l)"]</code> will only allow the <code>ls -l</code> command to be executed.</li>
+<li><strong>Default:</strong> All tools available for use by the Gemini model.</li>
+<li>
+<p><strong>Example:</strong> <code>"coreTools": ["ReadFileTool", "GlobTool", "ShellTool(ls)"]</code>.</p>
+</li>
+<li>
+<p><strong><code>excludeTools</code></strong> (array of strings):</p>
+</li>
+<li><strong>Description:</strong> Allows you to specify a list of core tool names that should be excluded from the model. A tool listed in both <code>excludeTools</code> and <code>coreTools</code> is excluded. You can also specify command-specific restrictions for tools that support it, like the <code>ShellTool</code>. For example, <code>"excludeTools": ["ShellTool(rm -rf)"]</code> will block the <code>rm -rf</code> command.</li>
+<li><strong>Default</strong>: No tools excluded.</li>
+<li><strong>Example:</strong> <code>"excludeTools": ["run_shell_command", "findFiles"]</code>.</li>
+<li>
+<p><strong>Security Note:</strong> Command-specific restrictions in
+    <code>excludeTools</code> for <code>run_shell_command</code> are based on simple string matching and can be easily bypassed. This feature is <strong>not a security mechanism</strong> and should not be relied upon to safely execute untrusted code. It is recommended to use <code>coreTools</code> to explicitly select commands
+    that can be executed.</p>
+</li>
+<li>
+<p><strong><code>autoAccept</code></strong> (boolean):</p>
+</li>
+<li><strong>Description:</strong> Controls whether the CLI automatically accepts and executes tool calls that are considered safe (e.g., read-only operations) without explicit user confirmation. If set to <code>true</code>, the CLI will bypass the confirmation prompt for tools deemed safe.</li>
+<li><strong>Default:</strong> <code>false</code></li>
+<li>
+<p><strong>Example:</strong> <code>"autoAccept": true</code></p>
+</li>
+<li>
+<p><strong><code>theme</code></strong> (string):</p>
+</li>
+<li><strong>Description:</strong> Sets the visual <a href="../themes/">theme</a> for Gemini CLI.</li>
+<li><strong>Default:</strong> <code>"Default"</code></li>
+<li>
+<p><strong>Example:</strong> <code>"theme": "GitHub"</code></p>
+</li>
+<li>
+<p><strong><code>sandbox</code></strong> (boolean or string):</p>
+</li>
+<li><strong>Description:</strong> Controls whether and how to use sandboxing for tool execution. If set to <code>true</code>, Gemini CLI uses a pre-built <code>gemini-cli-sandbox</code> Docker image. For more information, see <a href="#sandboxing">Sandboxing</a>.</li>
+<li><strong>Default:</strong> <code>false</code></li>
+<li>
+<p><strong>Example:</strong> <code>"sandbox": "docker"</code></p>
+</li>
+<li>
+<p><strong><code>toolDiscoveryCommand</code></strong> (string):</p>
+</li>
+<li><strong>Description:</strong> Defines a custom shell command for discovering tools from your project. The shell command must return on <code>stdout</code> a JSON array of <a href="https://ai.google.dev/gemini-api/docs/function-calling#function-declarations">function declarations</a>. Tool wrappers are optional.</li>
+<li><strong>Default:</strong> Empty</li>
+<li>
+<p><strong>Example:</strong> <code>"toolDiscoveryCommand": "bin/get_tools"</code></p>
+</li>
+<li>
+<p><strong><code>toolCallCommand</code></strong> (string):</p>
+</li>
+<li><strong>Description:</strong> Defines a custom shell command for calling a specific tool that was discovered using <code>toolDiscoveryCommand</code>. The shell command must meet the following criteria:<ul>
+<li>It must take function <code>name</code> (exactly as in <a href="https://ai.google.dev/gemini-api/docs/function-calling#function-declarations">function declaration</a>) as first command line argument.</li>
+<li>It must read function arguments as JSON on <code>stdin</code>, analogous to <a href="https://cloud.google.com/vertex-ai/generative-ai/docs/model-reference/inference#functioncall"><code>functionCall.args</code></a>.</li>
+<li>It must return function output as JSON on <code>stdout</code>, analogous to <a href="https://cloud.google.com/vertex-ai/generative-ai/docs/model-reference/inference#functionresponse"><code>functionResponse.response.content</code></a>.</li>
+</ul>
+</li>
+<li><strong>Default:</strong> Empty</li>
+<li>
+<p><strong>Example:</strong> <code>"toolCallCommand": "bin/call_tool"</code></p>
+</li>
+<li>
+<p><strong><code>mcpServers</code></strong> (object):</p>
+</li>
+<li><strong>Description:</strong> Configures connections to one or more Model-Context Protocol (MCP) servers for discovering and using custom tools. Gemini CLI attempts to connect to each configured MCP server to discover available tools. If multiple MCP servers expose a tool with the same name, the tool names will be prefixed with the server alias you defined in the configuration (e.g., <code>serverAlias__actualToolName</code>) to avoid conflicts. Note that the system might strip certain schema properties from MCP tool definitions for compatibility.</li>
+<li><strong>Default:</strong> Empty</li>
+<li><strong>Properties:</strong><ul>
+<li><strong><code>&lt;SERVER_NAME&gt;</code></strong> (object): The server parameters for the named server.</li>
+<li><code>command</code> (string, required): The command to execute to start the MCP server.</li>
+<li><code>args</code> (array of strings, optional): Arguments to pass to the command.</li>
+<li><code>env</code> (object, optional): Environment variables to set for the server process.</li>
+<li><code>cwd</code> (string, optional): The working directory in which to start the server.</li>
+<li><code>timeout</code> (number, optional): Timeout in milliseconds for requests to this MCP server.</li>
+<li><code>trust</code> (boolean, optional): Trust this server and bypass all tool call confirmations.</li>
+</ul>
+</li>
+<li>
+<p><strong>Example:</strong>
+    <code>json
+    "mcpServers": {
+      "myPythonServer": {
+        "command": "python",
+        "args": ["mcp_server.py", "--port", "8080"],
+        "cwd": "./mcp_tools/python",
+        "timeout": 5000
+      },
+      "myNodeServer": {
+        "command": "node",
+        "args": ["mcp_server.js"],
+        "cwd": "./mcp_tools/node"
+      },
+      "myDockerServer": {
+        "command": "docker",
+        "args": ["run", "i", "--rm", "-e", "API_KEY", "ghcr.io/foo/bar"],
+        "env": {
+          "API_KEY": "$MY_API_TOKEN"
+        }
+      },
+    }</code></p>
+</li>
+<li>
+<p><strong><code>checkpointing</code></strong> (object):</p>
+</li>
+<li><strong>Description:</strong> Configures the checkpointing feature, which allows you to save and restore conversation and file states. See the <a href="../../checkpointing/">Checkpointing documentation</a> for more details.</li>
+<li><strong>Default:</strong> <code>{"enabled": false}</code></li>
+<li>
+<p><strong>Properties:</strong></p>
+<ul>
+<li><strong><code>enabled</code></strong> (boolean): When <code>true</code>, the <code>/restore</code> command is available.</li>
+</ul>
+</li>
+<li>
+<p><strong><code>preferredEditor</code></strong> (string):</p>
+</li>
+<li><strong>Description:</strong> Specifies the preferred editor to use for viewing diffs.</li>
+<li><strong>Default:</strong> <code>vscode</code></li>
+<li>
+<p><strong>Example:</strong> <code>"preferredEditor": "vscode"</code></p>
+</li>
+<li>
+<p><strong><code>telemetry</code></strong> (object)</p>
+</li>
+<li><strong>Description:</strong> Configures logging and metrics collection for Gemini CLI. For more information, see <a href="../../telemetry/">Telemetry</a>.</li>
+<li><strong>Default:</strong> <code>{"enabled": false, "target": "local", "otlpEndpoint": "http://localhost:4317", "logPrompts": true}</code></li>
+<li><strong>Properties:</strong><ul>
+<li><strong><code>enabled</code></strong> (boolean): Whether or not telemetry is enabled.</li>
+<li><strong><code>target</code></strong> (string): The destination for collected telemetry. Supported values are <code>local</code> and <code>gcp</code>.</li>
+<li><strong><code>otlpEndpoint</code></strong> (string): The endpoint for the OTLP Exporter.</li>
+<li><strong><code>logPrompts</code></strong> (boolean): Whether or not to include the content of user prompts in the logs.</li>
+</ul>
+</li>
+<li><strong>Example:</strong>
+    <code>json
+    "telemetry": {
+      "enabled": true,
+      "target": "local",
+      "otlpEndpoint": "http://localhost:16686",
+      "logPrompts": false
+    }</code></li>
+<li><strong><code>usageStatisticsEnabled</code></strong> (boolean):</li>
+<li><strong>Description:</strong> Enables or disables the collection of usage statistics. See <a href="#usage-statistics">Usage Statistics</a> for more information.</li>
+<li><strong>Default:</strong> <code>true</code></li>
+<li>
+<p><strong>Example:</strong>
+    <code>json
+    "usageStatisticsEnabled": false</code></p>
+</li>
+<li>
+<p><strong><code>hideTips</code></strong> (boolean):</p>
+</li>
+<li><strong>Description:</strong> Enables or disables helpful tips in the CLI interface.</li>
+<li><strong>Default:</strong> <code>false</code></li>
+<li>
+<p><strong>Example:</strong></p>
+<p><code>json
+"hideTips": true</code></p>
+</li>
+</ul>
+<h3 id="example-settingsjson">Example <code>settings.json</code>:</h3>
+<pre><code class="language-json">{
+  &quot;theme&quot;: &quot;GitHub&quot;,
+  &quot;sandbox&quot;: &quot;docker&quot;,
+  &quot;toolDiscoveryCommand&quot;: &quot;bin/get_tools&quot;,
+  &quot;toolCallCommand&quot;: &quot;bin/call_tool&quot;,
+  &quot;mcpServers&quot;: {
+    &quot;mainServer&quot;: {
+      &quot;command&quot;: &quot;bin/mcp_server.py&quot;
+    },
+    &quot;anotherServer&quot;: {
+      &quot;command&quot;: &quot;node&quot;,
+      &quot;args&quot;: [&quot;mcp_server.js&quot;, &quot;--verbose&quot;]
+    }
+  },
+  &quot;telemetry&quot;: {
+    &quot;enabled&quot;: true,
+    &quot;target&quot;: &quot;local&quot;,
+    &quot;otlpEndpoint&quot;: &quot;http://localhost:4317&quot;,
+    &quot;logPrompts&quot;: true
+  },
+  &quot;usageStatisticsEnabled&quot;: true,
+  &quot;hideTips&quot;: false
+}
+</code></pre>
+<h2 id="shell-history">Shell History</h2>
+<p>The CLI keeps a history of shell commands you run. To avoid conflicts between different projects, this history is stored in a project-specific directory within your user's home folder.</p>
+<ul>
+<li><strong>Location:</strong> <code>~/.gemini/tmp/&lt;project_hash&gt;/shell_history</code></li>
+<li><code>&lt;project_hash&gt;</code> is a unique identifier generated from your project's root path.</li>
+<li>The history is stored in a file named <code>shell_history</code>.</li>
+</ul>
+<h2 id="environment-variables-env-files">Environment Variables &amp; <code>.env</code> Files</h2>
+<p>Environment variables are a common way to configure applications, especially for sensitive information like API keys or for settings that might change between environments.</p>
+<p>The CLI automatically loads environment variables from an <code>.env</code> file. The loading order is:</p>
+<ol>
+<li><code>.env</code> file in the current working directory.</li>
+<li>If not found, it searches upwards in parent directories until it finds an <code>.env</code> file or reaches the project root (identified by a <code>.git</code> folder) or the home directory.</li>
+<li>
+<p>If still not found, it looks for <code>~/.env</code> (in the user's home directory).</p>
+</li>
+<li>
+<p><strong><code>GEMINI_API_KEY</code></strong> (Required):</p>
+</li>
+<li>Your API key for the Gemini API.</li>
+<li><strong>Crucial for operation.</strong> The CLI will not function without it.</li>
+<li>Set this in your shell profile (e.g., <code>~/.bashrc</code>, <code>~/.zshrc</code>) or an <code>.env</code> file.</li>
+<li><strong><code>GEMINI_MODEL</code></strong>:</li>
+<li>Specifies the default Gemini model to use.</li>
+<li>Overrides the hardcoded default</li>
+<li>Example: <code>export GEMINI_MODEL="gemini-2.5-flash"</code></li>
+<li><strong><code>GOOGLE_API_KEY</code></strong>:</li>
+<li>Your Google Cloud API key.</li>
+<li>Required for using Vertex AI in express mode.</li>
+<li>Ensure you have the necessary permissions.</li>
+<li>Example: <code>export GOOGLE_API_KEY="YOUR_GOOGLE_API_KEY"</code>.</li>
+<li><strong><code>GOOGLE_CLOUD_PROJECT</code></strong>:</li>
+<li>Your Google Cloud Project ID.</li>
+<li>Required for using Code Assist or Vertex AI.</li>
+<li>If using Vertex AI, ensure you have the necessary permissions in this project.</li>
+<li><strong>Cloud Shell Note:</strong> When running in a Cloud Shell environment, this variable defaults to a special project allocated for Cloud Shell users. If you have <code>GOOGLE_CLOUD_PROJECT</code> set in your global environment in Cloud Shell, it will be overridden by this default. To use a different project in Cloud Shell, you must define <code>GOOGLE_CLOUD_PROJECT</code> in a <code>.env</code> file.</li>
+<li>Example: <code>export GOOGLE_CLOUD_PROJECT="YOUR_PROJECT_ID"</code>.</li>
+<li><strong><code>GOOGLE_APPLICATION_CREDENTIALS</code></strong> (string):</li>
+<li><strong>Description:</strong> The path to your Google Application Credentials JSON file.</li>
+<li><strong>Example:</strong> <code>export GOOGLE_APPLICATION_CREDENTIALS="/path/to/your/credentials.json"</code></li>
+<li><strong><code>OTLP_GOOGLE_CLOUD_PROJECT</code></strong>:</li>
+<li>Your Google Cloud Project ID for Telemetry in Google Cloud</li>
+<li>Example: <code>export OTLP_GOOGLE_CLOUD_PROJECT="YOUR_PROJECT_ID"</code>.</li>
+<li><strong><code>GOOGLE_CLOUD_LOCATION</code></strong>:</li>
+<li>Your Google Cloud Project Location (e.g., us-central1).</li>
+<li>Required for using Vertex AI in non express mode.</li>
+<li>Example: <code>export GOOGLE_CLOUD_LOCATION="YOUR_PROJECT_LOCATION"</code>.</li>
+<li><strong><code>GEMINI_SANDBOX</code></strong>:</li>
+<li>Alternative to the <code>sandbox</code> setting in <code>settings.json</code>.</li>
+<li>Accepts <code>true</code>, <code>false</code>, <code>docker</code>, <code>podman</code>, or a custom command string.</li>
+<li><strong><code>SEATBELT_PROFILE</code></strong> (macOS specific):</li>
+<li>Switches the Seatbelt (<code>sandbox-exec</code>) profile on macOS.</li>
+<li><code>permissive-open</code>: (Default) Restricts writes to the project folder (and a few other folders, see <code>packages/cli/src/utils/sandbox-macos-permissive-open.sb</code>) but allows other operations.</li>
+<li><code>strict</code>: Uses a strict profile that declines operations by default.</li>
+<li><code>&lt;profile_name&gt;</code>: Uses a custom profile. To define a custom profile, create a file named <code>sandbox-macos-&lt;profile_name&gt;.sb</code> in your project's <code>.gemini/</code> directory (e.g., <code>my-project/.gemini/sandbox-macos-custom.sb</code>).</li>
+<li><strong><code>DEBUG</code> or <code>DEBUG_MODE</code></strong> (often used by underlying libraries or the CLI itself):</li>
+<li>Set to <code>true</code> or <code>1</code> to enable verbose debug logging, which can be helpful for troubleshooting.</li>
+<li><strong><code>NO_COLOR</code></strong>:</li>
+<li>Set to any value to disable all color output in the CLI.</li>
+<li><strong><code>CLI_TITLE</code></strong>:</li>
+<li>Set to a string to customize the title of the CLI.</li>
+<li><strong><code>CODE_ASSIST_ENDPOINT</code></strong>:</li>
+<li>Specifies the endpoint for the code assist server.</li>
+<li>This is useful for development and testing.</li>
+</ol>
+<h2 id="command-line-arguments">Command-Line Arguments</h2>
+<p>Arguments passed directly when running the CLI can override other configurations for that specific session.</p>
+<ul>
+<li><strong><code>--model &lt;model_name&gt;</code></strong> (<strong><code>-m &lt;model_name&gt;</code></strong>):</li>
+<li>Specifies the Gemini model to use for this session.</li>
+<li>Example: <code>npm start -- --model gemini-1.5-pro-latest</code></li>
+<li><strong><code>--prompt &lt;your_prompt&gt;</code></strong> (<strong><code>-p &lt;your_prompt&gt;</code></strong>):</li>
+<li>Used to pass a prompt directly to the command. This invokes Gemini CLI in a non-interactive mode.</li>
+<li><strong><code>--sandbox</code></strong> (<strong><code>-s</code></strong>):</li>
+<li>Enables sandbox mode for this session.</li>
+<li><strong><code>--sandbox-image</code></strong>:</li>
+<li>Sets the sandbox image URI.</li>
+<li><strong><code>--debug</code></strong> (<strong><code>-d</code></strong>):</li>
+<li>Enables debug mode for this session, providing more verbose output.</li>
+<li><strong><code>--all-files</code></strong> (<strong><code>-a</code></strong>):</li>
+<li>If set, recursively includes all files within the current directory as context for the prompt.</li>
+<li><strong><code>--help</code></strong> (or <strong><code>-h</code></strong>):</li>
+<li>Displays help information about command-line arguments.</li>
+<li><strong><code>--show-memory-usage</code></strong>:</li>
+<li>Displays the current memory usage.</li>
+<li><strong><code>--yolo</code></strong>:</li>
+<li>Enables YOLO mode, which automatically approves all tool calls.</li>
+<li><strong><code>--telemetry</code></strong>:</li>
+<li>Enables <a href="../../telemetry/">telemetry</a>.</li>
+<li><strong><code>--telemetry-target</code></strong>:</li>
+<li>Sets the telemetry target. See <a href="../../telemetry/">telemetry</a> for more information.</li>
+<li><strong><code>--telemetry-otlp-endpoint</code></strong>:</li>
+<li>Sets the OTLP endpoint for telemetry. See <a href="../../telemetry/">telemetry</a> for more information.</li>
+<li><strong><code>--telemetry-log-prompts</code></strong>:</li>
+<li>Enables logging of prompts for telemetry. See <a href="../../telemetry/">telemetry</a> for more information.</li>
+<li><strong><code>--checkpointing</code></strong>:</li>
+<li>Enables <a href="../commands/#checkpointing-commands">checkpointing</a>.</li>
+<li><strong><code>--extensions &lt;extension_name ...&gt;</code></strong> (<strong><code>-e &lt;extension_name ...&gt;</code></strong>):</li>
+<li>Specifies a list of extensions to use for the session. If not provided, all available extensions are used.</li>
+<li>Use the special term <code>gemini -e none</code> to disable all extensions.</li>
+<li>Example: <code>gemini -e my-extension -e my-other-extension</code></li>
+<li><strong><code>--list-extensions</code></strong> (<strong><code>-l</code></strong>):</li>
+<li>Lists all available extensions and exits.</li>
+<li><strong><code>--version</code></strong>:</li>
+<li>Displays the version of the CLI.</li>
+</ul>
+<h2 id="context-files-hierarchical-instructional-context">Context Files (Hierarchical Instructional Context)</h2>
+<p>While not strictly configuration for the CLI's <em>behavior</em>, context files (defaulting to <code>GEMINI.md</code> but configurable via the <code>contextFileName</code> setting) are crucial for configuring the <em>instructional context</em> (also referred to as "memory") provided to the Gemini model. This powerful feature allows you to give project-specific instructions, coding style guides, or any relevant background information to the AI, making its responses more tailored and accurate to your needs. The CLI includes UI elements, such as an indicator in the footer showing the number of loaded context files, to keep you informed about the active context.</p>
+<ul>
+<li><strong>Purpose:</strong> These Markdown files contain instructions, guidelines, or context that you want the Gemini model to be aware of during your interactions. The system is designed to manage this instructional context hierarchically.</li>
+</ul>
+<h3 id="example-context-file-content-eg-geminimd">Example Context File Content (e.g., <code>GEMINI.md</code>)</h3>
+<p>Here's a conceptual example of what a context file at the root of a TypeScript project might contain:</p>
+<pre><code class="language-markdown"># Project: My Awesome TypeScript Library
+
+## General Instructions:
+
+- When generating new TypeScript code, please follow the existing coding style.
+- Ensure all new functions and classes have JSDoc comments.
+- Prefer functional programming paradigms where appropriate.
+- All code should be compatible with TypeScript 5.0 and Node.js 20+.
+
+## Coding Style:
+
+- Use 2 spaces for indentation.
+- Interface names should be prefixed with `I` (e.g., `IUserService`).
+- Private class members should be prefixed with an underscore (`_`).
+- Always use strict equality (`===` and `!==`).
+
+## Specific Component: `src/api/client.ts`
+
+- This file handles all outbound API requests.
+- When adding new API call functions, ensure they include robust error handling and logging.
+- Use the existing `fetchWithRetry` utility for all GET requests.
+
+## Regarding Dependencies:
+
+- Avoid introducing new external dependencies unless absolutely necessary.
+- If a new dependency is required, please state the reason.
+</code></pre>
+<p>This example demonstrates how you can provide general project context, specific coding conventions, and even notes about particular files or components. The more relevant and precise your context files are, the better the AI can assist you. Project-specific context files are highly encouraged to establish conventions and context.</p>
+<ul>
+<li><strong>Hierarchical Loading and Precedence:</strong> The CLI implements a sophisticated hierarchical memory system by loading context files (e.g., <code>GEMINI.md</code>) from several locations. Content from files lower in this list (more specific) typically overrides or supplements content from files higher up (more general). The exact concatenation order and final context can be inspected using the <code>/memory show</code> command. The typical loading order is:</li>
+<li><strong>Global Context File:</strong><ul>
+<li>Location: <code>~/.gemini/&lt;contextFileName&gt;</code> (e.g., <code>~/.gemini/GEMINI.md</code> in your user home directory).</li>
+<li>Scope: Provides default instructions for all your projects.</li>
+</ul>
+</li>
+<li><strong>Project Root &amp; Ancestors Context Files:</strong><ul>
+<li>Location: The CLI searches for the configured context file in the current working directory and then in each parent directory up to either the project root (identified by a <code>.git</code> folder) or your home directory.</li>
+<li>Scope: Provides context relevant to the entire project or a significant portion of it.</li>
+</ul>
+</li>
+<li><strong>Sub-directory Context Files (Contextual/Local):</strong><ul>
+<li>Location: The CLI also scans for the configured context file in subdirectories <em>below</em> the current working directory (respecting common ignore patterns like <code>node_modules</code>, <code>.git</code>, etc.).</li>
+<li>Scope: Allows for highly specific instructions relevant to a particular component, module, or subsection of your project.</li>
+</ul>
+</li>
+<li><strong>Concatenation &amp; UI Indication:</strong> The contents of all found context files are concatenated (with separators indicating their origin and path) and provided as part of the system prompt to the Gemini model. The CLI footer displays the count of loaded context files, giving you a quick visual cue about the active instructional context.</li>
+<li><strong>Commands for Memory Management:</strong></li>
+<li>Use <code>/memory refresh</code> to force a re-scan and reload of all context files from all configured locations. This updates the AI's instructional context.</li>
+<li>Use <code>/memory show</code> to display the combined instructional context currently loaded, allowing you to verify the hierarchy and content being used by the AI.</li>
+<li>See the <a href="../commands/#memory">Commands documentation</a> for full details on the <code>/memory</code> command and its sub-commands (<code>show</code> and <code>refresh</code>).</li>
+</ul>
+<p>By understanding and utilizing these configuration layers and the hierarchical nature of context files, you can effectively manage the AI's memory and tailor the Gemini CLI's responses to your specific needs and projects.</p>
+<h2 id="sandboxing">Sandboxing</h2>
+<p>The Gemini CLI can execute potentially unsafe operations (like shell commands and file modifications) within a sandboxed environment to protect your system.</p>
+<p>Sandboxing is disabled by default, but you can enable it in a few ways:</p>
+<ul>
+<li>Using <code>--sandbox</code> or <code>-s</code> flag.</li>
+<li>Setting <code>GEMINI_SANDBOX</code> environment variable.</li>
+<li>Sandbox is enabled in <code>--yolo</code> mode by default.</li>
+</ul>
+<p>By default, it uses a pre-built <code>gemini-cli-sandbox</code> Docker image.</p>
+<p>For project-specific sandboxing needs, you can create a custom Dockerfile at <code>.gemini/sandbox.Dockerfile</code> in your project's root directory. This Dockerfile can be based on the base sandbox image:</p>
+<pre><code class="language-dockerfile">FROM gemini-cli-sandbox
+
+# Add your custom dependencies or configurations here
+# For example:
+# RUN apt-get update &amp;&amp; apt-get install -y some-package
+# COPY ./my-config /app/my-config
+</code></pre>
+<p>When <code>.gemini/sandbox.Dockerfile</code> exists, you can use <code>BUILD_SANDBOX</code> environment variable when running Gemini CLI to automatically build the custom sandbox image:</p>
+<pre><code class="language-bash">BUILD_SANDBOX=1 gemini -s
+</code></pre>
+<h2 id="usage-statistics">Usage Statistics</h2>
+<p>To help us improve the Gemini CLI, we collect anonymized usage statistics. This data helps us understand how the CLI is used, identify common issues, and prioritize new features.</p>
+<p><strong>What we collect:</strong></p>
+<ul>
+<li><strong>Tool Calls:</strong> We log the names of the tools that are called, whether they succeed or fail, and how long they take to execute. We do not collect the arguments passed to the tools or any data returned by them.</li>
+<li><strong>API Requests:</strong> We log the Gemini model used for each request, the duration of the request, and whether it was successful. We do not collect the content of the prompts or responses.</li>
+<li><strong>Session Information:</strong> We collect information about the configuration of the CLI, such as the enabled tools and the approval mode.</li>
+</ul>
+<p><strong>What we DON'T collect:</strong></p>
+<ul>
+<li><strong>Personally Identifiable Information (PII):</strong> We do not collect any personal information, such as your name, email address, or API keys.</li>
+<li><strong>Prompt and Response Content:</strong> We do not log the content of your prompts or the responses from the Gemini model.</li>
+<li><strong>File Content:</strong> We do not log the content of any files that are read or written by the CLI.</li>
+</ul>
+<p><strong>How to opt out:</strong></p>
+<p>You can opt out of usage statistics collection at any time by setting the <code>usageStatisticsEnabled</code> property to <code>false</code> in your <code>settings.json</code> file:</p>
+<pre><code class="language-json">{
+  &quot;usageStatisticsEnabled&quot;: false
+}
+</code></pre>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": ["search.suggest", "search.highlight", "content.tabs.link", "content.code.annotation", "content.code.copy"], "search": "../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.56ea9cef.min.js"></script>
+      
+    
+  </body>
+</html>

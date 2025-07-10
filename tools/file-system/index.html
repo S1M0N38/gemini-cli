@@ -1,0 +1,1552 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://S1M0N38.github.io/gemini-cli/tools/file-system/">
+      
+      
+        <link rel="prev" href="../">
+      
+      
+        <link rel="next" href="../mcp-server/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.15">
+    
+    
+      
+        <title>Gemini CLI file system tools - Gemini CLI</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.342714a4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#gemini-cli-file-system-tools" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Gemini CLI" class="md-header__button md-logo" aria-label="Gemini CLI" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M9.4 86.6c-12.5-12.5-12.5-32.7 0-45.2s32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L178.7 256zM256 416h288c17.7 0 32 14.3 32 32s-14.3 32-32 32H256c-17.7 0-32-14.3-32-32s14.3-32 32-32"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Gemini CLI
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Gemini CLI file system tools
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/S1M0N38/gemini-cli" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    S1M0N38/gemini-cli
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Gemini CLI" class="md-nav__button md-logo" aria-label="Gemini CLI" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M9.4 86.6c-12.5-12.5-12.5-32.7 0-45.2s32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L178.7 256zM256 416h288c17.7 0 32 14.3 32 32s-14.3 32-32 32H256c-17.7 0-32-14.3-32-32s14.3-32 32-32"/></svg>
+
+    </a>
+    Gemini CLI
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/S1M0N38/gemini-cli" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    S1M0N38/gemini-cli
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Welcome to Gemini CLI documentation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../architecture/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Gemini CLI Architecture Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../checkpointing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Checkpointing
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deployment/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Gemini CLI Execution and Deployment
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../extension/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Gemini CLI Extensions
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../integration-tests/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Integration Tests
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../npm/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Package Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../quota-and-pricing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Gemini CLI: Quotas and Pricing
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sandbox/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Sandboxing in the Gemini CLI
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../telemetry/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Gemini CLI Observability Guide
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tos-privacy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Gemini CLI: Terms of Service and Privacy Notice
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../troubleshooting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Troubleshooting Guide
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Uninstall/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Uninstall
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_14" >
+        
+          
+          <label class="md-nav__link" for="__nav_14" id="__nav_14_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    CLI
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_14_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_14">
+            <span class="md-nav__icon md-icon"></span>
+            CLI
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cli/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Gemini CLI
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cli/authentication/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Authentication Setup
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cli/commands/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    CLI Commands
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cli/configuration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Gemini CLI Configuration
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cli/themes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Themes
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cli/token-caching/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Token Caching and Cost Optimization
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cli/tutorials/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Tutorials
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_15" >
+        
+          
+          <label class="md-nav__link" for="__nav_15" id="__nav_15_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Core
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_15_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_15">
+            <span class="md-nav__icon md-icon"></span>
+            Core
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../core/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Gemini CLI Core
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../core/memport/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Memory Import Processor
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../core/tools-api/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Gemini CLI Core: Tools API
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_16" >
+        
+          
+          <label class="md-nav__link" for="__nav_16" id="__nav_16_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Examples
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_16_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_16">
+            <span class="md-nav__icon md-icon"></span>
+            Examples
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../examples/proxy-script/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Example Proxy Script
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_17" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_17" id="__nav_17_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Tools
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_17_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_17">
+            <span class="md-nav__icon md-icon"></span>
+            Tools
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Gemini CLI tools
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Gemini CLI file system tools
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Gemini CLI file system tools
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-list_directory-readfolder" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. list_directory (ReadFolder)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-read_file-readfile" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. read_file (ReadFile)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-write_file-writefile" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. write_file (WriteFile)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-glob-findfiles" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. glob (FindFiles)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-search_file_content-searchtext" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. search_file_content (SearchText)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-replace-edit" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. replace (Edit)
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mcp-server/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    MCP servers with the Gemini CLI
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../memory/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Memory Tool (save_memory)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../multi-file/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Multi File Read Tool (read_many_files)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../shell/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Shell Tool (run_shell_command)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../web-fetch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Web Fetch Tool (web_fetch)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../web-search/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Web Search Tool (google_web_search)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-list_directory-readfolder" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. list_directory (ReadFolder)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-read_file-readfile" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. read_file (ReadFile)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-write_file-writefile" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. write_file (WriteFile)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-glob-findfiles" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. glob (FindFiles)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-search_file_content-searchtext" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. search_file_content (SearchText)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-replace-edit" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. replace (Edit)
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="gemini-cli-file-system-tools">Gemini CLI file system tools</h1>
+<p>The Gemini CLI provides a comprehensive suite of tools for interacting with the local file system. These tools allow the Gemini model to read from, write to, list, search, and modify files and directories, all under your control and typically with confirmation for sensitive operations.</p>
+<p><strong>Note:</strong> All file system tools operate within a <code>rootDirectory</code> (usually the current working directory where you launched the CLI) for security. Paths that you provide to these tools are generally expected to be absolute or are resolved relative to this root directory.</p>
+<h2 id="1-list_directory-readfolder">1. <code>list_directory</code> (ReadFolder)</h2>
+<p><code>list_directory</code> lists the names of files and subdirectories directly within a specified directory path. It can optionally ignore entries matching provided glob patterns.</p>
+<ul>
+<li><strong>Tool name:</strong> <code>list_directory</code></li>
+<li><strong>Display name:</strong> ReadFolder</li>
+<li><strong>File:</strong> <code>ls.ts</code></li>
+<li><strong>Parameters:</strong></li>
+<li><code>path</code> (string, required): The absolute path to the directory to list.</li>
+<li><code>ignore</code> (array of strings, optional): A list of glob patterns to exclude from the listing (e.g., <code>["*.log", ".git"]</code>).</li>
+<li><code>respect_git_ignore</code> (boolean, optional): Whether to respect <code>.gitignore</code> patterns when listing files. Defaults to <code>true</code>.</li>
+<li><strong>Behavior:</strong></li>
+<li>Returns a list of file and directory names.</li>
+<li>Indicates whether each entry is a directory.</li>
+<li>Sorts entries with directories first, then alphabetically.</li>
+<li><strong>Output (<code>llmContent</code>):</strong> A string like: <code>Directory listing for /path/to/your/folder:\n[DIR] subfolder1\nfile1.txt\nfile2.png</code></li>
+<li><strong>Confirmation:</strong> No.</li>
+</ul>
+<h2 id="2-read_file-readfile">2. <code>read_file</code> (ReadFile)</h2>
+<p><code>read_file</code> reads and returns the content of a specified file. This tool handles text, images (PNG, JPG, GIF, WEBP, SVG, BMP), and PDF files. For text files, it can read specific line ranges. Other binary file types are generally skipped.</p>
+<ul>
+<li><strong>Tool name:</strong> <code>read_file</code></li>
+<li><strong>Display name:</strong> ReadFile</li>
+<li><strong>File:</strong> <code>read-file.ts</code></li>
+<li><strong>Parameters:</strong></li>
+<li><code>path</code> (string, required): The absolute path to the file to read.</li>
+<li><code>offset</code> (number, optional): For text files, the 0-based line number to start reading from. Requires <code>limit</code> to be set.</li>
+<li><code>limit</code> (number, optional): For text files, the maximum number of lines to read. If omitted, reads a default maximum (e.g., 2000 lines) or the entire file if feasible.</li>
+<li><strong>Behavior:</strong></li>
+<li>For text files: Returns the content. If <code>offset</code> and <code>limit</code> are used, returns only that slice of lines. Indicates if content was truncated due to line limits or line length limits.</li>
+<li>For image and PDF files: Returns the file content as a base64-encoded data structure suitable for model consumption.</li>
+<li>For other binary files: Attempts to identify and skip them, returning a message indicating it's a generic binary file.</li>
+<li><strong>Output:</strong> (<code>llmContent</code>):</li>
+<li>For text files: The file content, potentially prefixed with a truncation message (e.g., <code>[File content truncated: showing lines 1-100 of 500 total lines...]\nActual file content...</code>).</li>
+<li>For image/PDF files: An object containing <code>inlineData</code> with <code>mimeType</code> and base64 <code>data</code> (e.g., <code>{ inlineData: { mimeType: 'image/png', data: 'base64encodedstring' } }</code>).</li>
+<li>For other binary files: A message like <code>Cannot display content of binary file: /path/to/data.bin</code>.</li>
+<li><strong>Confirmation:</strong> No.</li>
+</ul>
+<h2 id="3-write_file-writefile">3. <code>write_file</code> (WriteFile)</h2>
+<p><code>write_file</code> writes content to a specified file. If the file exists, it will be overwritten. If the file doesn't exist, it (and any necessary parent directories) will be created.</p>
+<ul>
+<li><strong>Tool name:</strong> <code>write_file</code></li>
+<li><strong>Display name:</strong> WriteFile</li>
+<li><strong>File:</strong> <code>write-file.ts</code></li>
+<li><strong>Parameters:</strong></li>
+<li><code>file_path</code> (string, required): The absolute path to the file to write to.</li>
+<li><code>content</code> (string, required): The content to write into the file.</li>
+<li><strong>Behavior:</strong></li>
+<li>Writes the provided <code>content</code> to the <code>file_path</code>.</li>
+<li>Creates parent directories if they don't exist.</li>
+<li><strong>Output (<code>llmContent</code>):</strong> A success message, e.g., <code>Successfully overwrote file: /path/to/your/file.txt</code> or <code>Successfully created and wrote to new file: /path/to/new/file.txt</code>.</li>
+<li><strong>Confirmation:</strong> Yes. Shows a diff of changes and asks for user approval before writing.</li>
+</ul>
+<h2 id="4-glob-findfiles">4. <code>glob</code> (FindFiles)</h2>
+<p><code>glob</code> finds files matching specific glob patterns (e.g., <code>src/**/*.ts</code>, <code>*.md</code>), returning absolute paths sorted by modification time (newest first).</p>
+<ul>
+<li><strong>Tool name:</strong> <code>glob</code></li>
+<li><strong>Display name:</strong> FindFiles</li>
+<li><strong>File:</strong> <code>glob.ts</code></li>
+<li><strong>Parameters:</strong></li>
+<li><code>pattern</code> (string, required): The glob pattern to match against (e.g., <code>"*.py"</code>, <code>"src/**/*.js"</code>).</li>
+<li><code>path</code> (string, optional): The absolute path to the directory to search within. If omitted, searches the tool's root directory.</li>
+<li><code>case_sensitive</code> (boolean, optional): Whether the search should be case-sensitive. Defaults to <code>false</code>.</li>
+<li><code>respect_git_ignore</code> (boolean, optional): Whether to respect .gitignore patterns when finding files. Defaults to <code>true</code>.</li>
+<li><strong>Behavior:</strong></li>
+<li>Searches for files matching the glob pattern within the specified directory.</li>
+<li>Returns a list of absolute paths, sorted with the most recently modified files first.</li>
+<li>Ignores common nuisance directories like <code>node_modules</code> and <code>.git</code> by default.</li>
+<li><strong>Output (<code>llmContent</code>):</strong> A message like: <code>Found 5 file(s) matching "*.ts" within src, sorted by modification time (newest first):\nsrc/file1.ts\nsrc/subdir/file2.ts...</code></li>
+<li><strong>Confirmation:</strong> No.</li>
+</ul>
+<h2 id="5-search_file_content-searchtext">5. <code>search_file_content</code> (SearchText)</h2>
+<p><code>search_file_content</code> searches for a regular expression pattern within the content of files in a specified directory. Can filter files by a glob pattern. Returns the lines containing matches, along with their file paths and line numbers.</p>
+<ul>
+<li><strong>Tool name:</strong> <code>search_file_content</code></li>
+<li><strong>Display name:</strong> SearchText</li>
+<li><strong>File:</strong> <code>grep.ts</code></li>
+<li><strong>Parameters:</strong></li>
+<li><code>pattern</code> (string, required): The regular expression (regex) to search for (e.g., <code>"function\s+myFunction"</code>).</li>
+<li><code>path</code> (string, optional): The absolute path to the directory to search within. Defaults to the current working directory.</li>
+<li><code>include</code> (string, optional): A glob pattern to filter which files are searched (e.g., <code>"*.js"</code>, <code>"src/**/*.{ts,tsx}"</code>). If omitted, searches most files (respecting common ignores).</li>
+<li><strong>Behavior:</strong></li>
+<li>Uses <code>git grep</code> if available in a Git repository for speed, otherwise falls back to system <code>grep</code> or a JavaScript-based search.</li>
+<li>Returns a list of matching lines, each prefixed with its file path (relative to the search directory) and line number.</li>
+<li><strong>Output (<code>llmContent</code>):</strong> A formatted string of matches, e.g.:
+  ```
+  Found 3 matches for pattern "myFunction" in path "." (filter: "*.ts"):</li>
+</ul>
+<hr />
+<p>File: src/utils.ts
+  L15: export function myFunction() {
+  L22:   myFunction.call();</p>
+<hr />
+<p>File: src/index.ts
+  L5: import { myFunction } from './utils';</p>
+<hr />
+<p>```
+- <strong>Confirmation:</strong> No.</p>
+<h2 id="6-replace-edit">6. <code>replace</code> (Edit)</h2>
+<p><code>replace</code> replaces text within a file. By default, replaces a single occurrence, but can replace multiple occurrences when <code>expected_replacements</code> is specified. This tool is designed for precise, targeted changes and requires significant context around the <code>old_string</code> to ensure it modifies the correct location.</p>
+<ul>
+<li><strong>Tool name:</strong> <code>replace</code></li>
+<li><strong>Display name:</strong> Edit</li>
+<li><strong>File:</strong> <code>edit.ts</code></li>
+<li><strong>Parameters:</strong></li>
+<li><code>file_path</code> (string, required): The absolute path to the file to modify.</li>
+<li>
+<p><code>old_string</code> (string, required): The exact literal text to replace.</p>
+<p><strong>CRITICAL:</strong> This string must uniquely identify the single instance to change. It should include at least 3 lines of context <em>before</em> and <em>after</em> the target text, matching whitespace and indentation precisely. If <code>old_string</code> is empty, the tool attempts to create a new file at <code>file_path</code> with <code>new_string</code> as content.</p>
+</li>
+<li>
+<p><code>new_string</code> (string, required): The exact literal text to replace <code>old_string</code> with.</p>
+</li>
+<li>
+<p><code>expected_replacements</code> (number, optional): The number of occurrences to replace. Defaults to <code>1</code>.</p>
+</li>
+<li>
+<p><strong>Behavior:</strong></p>
+</li>
+<li>If <code>old_string</code> is empty and <code>file_path</code> does not exist, creates a new file with <code>new_string</code> as content.</li>
+<li>If <code>old_string</code> is provided, it reads the <code>file_path</code> and attempts to find exactly one occurrence of <code>old_string</code>.</li>
+<li>If one occurrence is found, it replaces it with <code>new_string</code>.</li>
+<li><strong>Enhanced Reliability (Multi-Stage Edit Correction):</strong> To significantly improve the success rate of edits, especially when the model-provided <code>old_string</code> might not be perfectly precise, the tool incorporates a multi-stage edit correction mechanism.<ul>
+<li>If the initial <code>old_string</code> isn't found or matches multiple locations, the tool can leverage the Gemini model to iteratively refine <code>old_string</code> (and potentially <code>new_string</code>).</li>
+<li>This self-correction process attempts to identify the unique segment the model intended to modify, making the <code>replace</code> operation more robust even with slightly imperfect initial context.</li>
+</ul>
+</li>
+<li><strong>Failure conditions:</strong> Despite the correction mechanism, the tool will fail if:</li>
+<li><code>file_path</code> is not absolute or is outside the root directory.</li>
+<li><code>old_string</code> is not empty, but the <code>file_path</code> does not exist.</li>
+<li><code>old_string</code> is empty, but the <code>file_path</code> already exists.</li>
+<li><code>old_string</code> is not found in the file after attempts to correct it.</li>
+<li><code>old_string</code> is found multiple times, and the self-correction mechanism cannot resolve it to a single, unambiguous match.</li>
+<li><strong>Output (<code>llmContent</code>):</strong></li>
+<li>On success: <code>Successfully modified file: /path/to/file.txt (1 replacements).</code> or <code>Created new file: /path/to/new_file.txt with provided content.</code></li>
+<li>On failure: An error message explaining the reason (e.g., <code>Failed to edit, 0 occurrences found...</code>, <code>Failed to edit, expected 1 occurrences but found 2...</code>).</li>
+<li><strong>Confirmation:</strong> Yes. Shows a diff of the proposed changes and asks for user approval before writing to the file.</li>
+</ul>
+<p>These file system tools provide a foundation for the Gemini CLI to understand and interact with your local project context.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": ["search.suggest", "search.highlight", "content.tabs.link", "content.code.annotation", "content.code.copy"], "search": "../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.56ea9cef.min.js"></script>
+      
+    
+  </body>
+</html>
